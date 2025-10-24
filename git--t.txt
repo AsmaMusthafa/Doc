@@ -1,0 +1,84 @@
+asmam@FSSRENTAL215 MINGW64 ~/Downloads/18576_documents (master)
+$ git init
+Initialized empty Git repository in C:/Users/asmam/Downloads/18576_documents/.git/
+
+asmam@FSSRENTAL215 MINGW64 ~/Downloads/18576_documents (master)
+$ git remote add origin git@github.com:AsmaMusthafa/Doc.git
+
+asmam@FSSRENTAL215 MINGW64 ~/Downloads/18576_documents (master)
+$ git remote set-url origin git@github.com:AsmaMusthafa/Doc.git
+
+asmam@FSSRENTAL215 MINGW64 ~/Downloads/18576_documents (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        18576_documents.zip
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+asmam@FSSRENTAL215 MINGW64 ~/Downloads/18576_documents (master)
+$ git add .
+
+asmam@FSSRENTAL215 MINGW64 ~/Downloads/18576_documents (master)
+$ git commit -m "push"
+[master (root-commit) 089645c] push
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 18576_documents.zip
+
+asmam@FSSRENTAL215 MINGW64 ~/Downloads/18576_documents (master)
+$ git push origin master:main
+ssh: connect to host github.com port 22: Connection timed out
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+asmam@FSSRENTAL215 MINGW64 ~/Downloads/18576_documents (master)
+$ git push origin master:main
+To github.com:AsmaMusthafa/Doc.git
+ ! [rejected]        master -> main (fetch first)
+error: failed to push some refs to 'github.com:AsmaMusthafa/Doc.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+asmam@FSSRENTAL215 MINGW64 ~/Downloads/18576_documents (master)
+$ git pull origin
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 189.16 KiB | 620.00 KiB/s, done.
+From github.com:AsmaMusthafa/Doc
+ * [new branch]      main       -> origin/main
+You asked to pull from the remote 'origin', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+
+asmam@FSSRENTAL215 MINGW64 ~/Downloads/18576_documents (master)
+$ git pull origin main
+From github.com:AsmaMusthafa/Doc
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+asmam@FSSRENTAL215 MINGW64 ~/Downloads/18576_documents (master)
+$ git pull origin main --allow-unrelated-histories
+From github.com:AsmaMusthafa/Doc
+ * branch            main       -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ 18576.pdf | Bin 0 -> 195414 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 18576.pdf
+
+asmam@FSSRENTAL215 MINGW64 ~/Downloads/18576_documents (master)
+$ git push origin master:main
+
+
+
+
